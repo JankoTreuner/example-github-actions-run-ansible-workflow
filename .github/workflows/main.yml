@@ -56,7 +56,7 @@ jobs:
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
           #config: ${{ secrets.CONFIG }} # ssh_config; optional
           if_key_exists: fail # replace / ignore / fail; optional (defaults to fail)
-    
+      # Finally run the playbook
       - name: run playbook
         run: |
           ansible-playbook -i inventory ansible/hello-world.yaml
