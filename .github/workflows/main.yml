@@ -45,7 +45,7 @@ jobs:
       - name: write inventory to file
         env:
           INVENTORY: ${{ secrets.INVENTORY }}
-        run: 'echo "$INVENTORY" > hosts'
+        run: 'echo "$INVENTORY" > inventory'
       - name: Install SSH key
         uses: shimataro/ssh-key-action@v2
         with:
@@ -56,7 +56,6 @@ jobs:
           if_key_exists: fail # replace / ignore / fail; optional (defaults to fail)
     
       - name: run playbook
-        # ansible-playbook -i inventory ansible/hello-world.yaml
         run: |
-          ansible-playbook ansible/hello-world.yaml
+          ansible-playbook -i inventory ansible/hello-world.yaml
           
