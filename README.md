@@ -4,6 +4,11 @@ Example showing how to run an ansible playbook using github actions
 ## How to run this example (in a forked repository, with your own configuration)
 Setup GitHub secrets INVENTORY, KNOWN_HOSTS and SSH_KEY.
 
+
+> [!IMPORTANT]  
+> Ensure that the tool you use to set the GitHub secret supports multiline content (VSCode seems not to support it). 
+> I recommend using the github.com website itself.
+
 Afterwards every push to the repository or manual trigger of the workflow direktly (via GitHub.com -> Actions) should trigger the workflow and execute the playbook on the confiured hosts.
 
 For more details see description below.
