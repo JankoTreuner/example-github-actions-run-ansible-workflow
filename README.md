@@ -46,6 +46,8 @@ The workflow contains the following jobs
 #### validate
 Runs asible-lint to ensure the code quality of the playbook.
 
+The requirements.yml is required to resolve additional namespaces while linting.
+
 #### run-playbook
 
 ##### Steps
