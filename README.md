@@ -32,9 +32,9 @@ pip install -r requirements.txt
 ```
 
 ### Simple ansilbe-playbook
-See file ``` ansible/hello-world.yaml ``` 
+See file ``` ansible/ping.yaml ``` 
 
-This playbooks writes a file ``` /tmp/testfile.txt``` with the content ``` hello-world ```
+Uses the ansible.builtin.ping module to test connection to remote
 
 ### Github action workflow
 See file ``` .github/workflows/main.yml ``` 
